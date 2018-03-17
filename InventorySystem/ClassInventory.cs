@@ -136,18 +136,26 @@ namespace InventorySystem
         }
 
         // where ID='" + ID + "' ";
-        public DataTable UserTable(string username, string password)
+        public DataTable UserTable(string inUsername, string password)
         {
-            string Query = "Select * from TableUser where username='"+username+"' AND password='"+password+"'";
+            string Query = "Select * from TableUser";
             SqlCommand sc = new SqlCommand(Query, ConnectionString.GetConnection());
             DataTable dt = new DataTable();
             SqlDataAdapter sds = new SqlDataAdapter(sc);
             sds.Fill(dt);
-            MessageBox.Show("G " + dt.Rows);
-            if(dt.Rows.Count > 0)
+            MessageBox.Show("count " + dt.Rows.Count);
+
+            if (dt.Rows.Count > 0)
             {
+                int idColumn = 0;
                 int typeColumn = 5;
-                if(dt.Rows[-])
+                //if(dt.Rows[0][1])
+                string name = dt.Rows[0][1].ToString();
+                string surnname = dt.Rows[0][2].ToString();
+                string username = dt.Rows[0][3].ToString();
+                string type = dt.Rows[0][typeColumn].ToString();
+                MessageBox.Show("G " + name);
+
             }
             else
             {
