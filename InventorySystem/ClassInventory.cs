@@ -143,7 +143,6 @@ namespace InventorySystem
             DataTable dt = new DataTable();
             SqlDataAdapter sds = new SqlDataAdapter(sc);
             sds.Fill(dt);
-            MessageBox.Show("count " + dt.Rows.Count);
 
             if (dt.Rows.Count > 0)
             {
@@ -153,9 +152,10 @@ namespace InventorySystem
                 string name = dt.Rows[0][1].ToString();
                 string surnname = dt.Rows[0][2].ToString();
                 string username = dt.Rows[0][3].ToString();
-                string type = dt.Rows[0][typeColumn].ToString();
-                MessageBox.Show("G " + name);
+                String type = dt.Rows[0][typeColumn].ToString();
                 User user;
+
+                Console.WriteLine("type :"+ type);
                 if (type.Equals("admin"))
                 {
                     user = new Admin();

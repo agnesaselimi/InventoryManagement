@@ -10,11 +10,6 @@ namespace InventorySystem
     
         public string username;
         public string password;
-
-        public override Role getRole()
-        {
-            return Role.Moderator;
-        }
     }
 
 }

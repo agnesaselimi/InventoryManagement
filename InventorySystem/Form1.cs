@@ -59,8 +59,12 @@ namespace InventorySystem
         {
             string Username = tbUserName.Text;
             string Password = tbPassword.Text;
-            ClassInventory.Instance.UserTable(Username,Password);
-          
+            User user = ClassInventory.Instance.UserTable(Username,Password);
+            if (user != null)
+            {
+                MessageBox.Show("G " + user.getRole());
+
+            }
         }
         private void FormLogin_Load(object sender, EventArgs e)
         {
