@@ -170,7 +170,7 @@ namespace InventorySystem
             }
             else
             {
-                return null;
+                throw new UserException("Username or password is inccorect. Please try again.");
             }
 
         }

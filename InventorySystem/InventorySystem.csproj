@@ -143,6 +143,7 @@
       <DependentUpon>Transaction.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <Compile Include="UserException.cs" />
     <Compile Include="UserHelper.cs" />
     <Compile Include="UserRole.cs" />
     <Compile Include="VendorDetails.cs">

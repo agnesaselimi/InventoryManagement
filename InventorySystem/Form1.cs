@@ -37,21 +37,6 @@ namespace InventorySystem
 
         private void btLogin_Click(object sender, EventArgs e)
         {
-
-            /*
-            string Username = tbUserName.Text;
-            string Password = tbPassword.Text;
-            if (Username == "" && Password == "")
-            {
-                this.Hide();
-                loginImpl.onUserLogin();
-
-            }
-            else
-            {
-                loginImpl.onUserFailToLogin("User not found.");
-            }*/
-
             loginUser();
         }
         
@@ -59,17 +44,19 @@ namespace InventorySystem
         {
             string Username = tbUserName.Text;
             string Password = tbPassword.Text;
-            UserHelper.user = ClassInventory.Instance.UserTable(Username, Password);
-            
-            if (UserHelper.user != null)
+
+            try
             {
-                MessageBox.Show("Hi "+ UserHelper.user.name+ ", you have logged in as "+ UserHelper.user.getRole()+" successfully");
+                UserHelper.user = ClassInventory.Instance.UserTable(Username, Password);
+                MessageBox.Show("Hi " + UserHelper.user.name + ", you have logged in as " + UserHelper.user.getRole() + " successfully");
                 loginImpl.onUserLogin();
             }
-            else
+            catch(UserException e)
             {
-                loginImpl.onUserFailToLogin("Username or password is inccorect. Please try again.");
+                loginImpl.onUserFailToLogin(e.Message);
+
             }
+           
         }
         private void FormLogin_Load(object sender, EventArgs e)
         {
