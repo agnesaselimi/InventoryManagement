@@ -7,7 +7,14 @@ namespace InventorySystem
 {
     abstract class User : Person
     {
+    
         string username;
         string password;
+
+        public override Role getRole()
+        {
+            return Role.Moderator;
+        }
     }
+
 }

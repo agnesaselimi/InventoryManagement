@@ -7,6 +7,9 @@ namespace InventorySystem
 {
     class Admin : User
     {
-        
+        public override Role getRole()
+        {
+            return Role.Admin;
+        }
     }
 }
