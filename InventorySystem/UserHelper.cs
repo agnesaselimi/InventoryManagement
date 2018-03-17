@@ -5,12 +5,8 @@ using System.Text;
 
 namespace InventorySystem
 {
-    abstract class User : Person
+    static class UserHelper
     {
-    
-        public string username;
-        public string password;
-
+        public static User user;
     }
-
 }

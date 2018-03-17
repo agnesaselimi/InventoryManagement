@@ -59,10 +59,11 @@ namespace InventorySystem
         {
             string Username = tbUserName.Text;
             string Password = tbPassword.Text;
-            User user = ClassInventory.Instance.UserTable(Username,Password);
-            if (user != null)
+            UserHelper.user = ClassInventory.Instance.UserTable(Username, Password);
+            
+            if (UserHelper.user != null)
             {
-                MessageBox.Show("G " + user.getRole());
+                MessageBox.Show("G " + UserHelper.user.getRole());
 
             }
         }
