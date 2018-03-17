@@ -63,8 +63,12 @@ namespace InventorySystem
             
             if (UserHelper.user != null)
             {
-                MessageBox.Show("G " + UserHelper.user.getRole());
-
+                MessageBox.Show("Hi "+ UserHelper.user.name+ ", you have logged in as "+ UserHelper.user.getRole()+" successfully");
+                loginImpl.onUserLogin();
+            }
+            else
+            {
+                loginImpl.onUserFailToLogin("Username or password is inccorect. Please try again.");
             }
         }
         private void FormLogin_Load(object sender, EventArgs e)
