@@ -5,10 +5,8 @@ using System.Text;
 
 namespace InventorySystem
 {
-    abstract class Person
+    class Admin : User
     {
-        protected int Id;
-        protected String name;
-        protected String surname;
+        
     }
 }
