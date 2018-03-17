@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,6 +37,7 @@ namespace InventorySystem
             {
                 cbCategory.Items.Add(dg.Rows[i].Cells[0].Value);
             }
+            
         }
 
         private void btAdd_Click(object sender, EventArgs e)
