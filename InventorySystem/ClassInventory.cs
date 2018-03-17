@@ -136,7 +136,7 @@ namespace InventorySystem
         }
 
         // where ID='" + ID + "' ";
-        public DataTable UserTable(string inUsername, string password)
+        public User UserTable(string inUsername, string password)
         {
             string Query = "Select * from TableUser WHERE username= '"+inUsername+"' AND password= '"+password+"'";
             SqlCommand sc = new SqlCommand(Query, ConnectionString.GetConnection());
@@ -155,14 +155,24 @@ namespace InventorySystem
                 string username = dt.Rows[0][3].ToString();
                 string type = dt.Rows[0][typeColumn].ToString();
                 MessageBox.Show("G " + name);
-
+                User user;
+                if (type.Equals("admin"))
+                {
+                    user = new Admin();
+                }
+                else {
+                    user = new Moderator();
+                }
+                user.username = username;
+                user.name = name;
+                user.surname = surnname;
+                return user;
             }
             else
             {
-
+                return null;
             }
 
-            return dt;
         }
 
 

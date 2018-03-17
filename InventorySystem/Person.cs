@@ -13,9 +13,8 @@ namespace InventorySystem
     }
     abstract class Person
     {
-        protected int Id;
-        protected String name;
-        protected String surname;
+        public String name;
+        public String surname;
 
         public abstract Role getRole();
 

@@ -5,16 +5,11 @@ using System.Text;
 
 namespace InventorySystem
 {
-    abstract class User : Person
+    class Moderator : User
     {
-    
-        public string username;
-        public string password;
-
         public override Role getRole()
         {
             return Role.Moderator;
         }
     }
-
 }
