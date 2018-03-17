@@ -135,15 +135,24 @@ namespace InventorySystem
             return dt;
         }
 
-
-        public DataTable UserTable()
+        // where ID='" + ID + "' ";
+        public DataTable UserTable(string username, string password)
         {
-            string Query = "Select * from TableUser";
+            string Query = "Select * from TableUser where username='"+username+"' AND password='"+password+"'";
             SqlCommand sc = new SqlCommand(Query, ConnectionString.GetConnection());
             DataTable dt = new DataTable();
             SqlDataAdapter sds = new SqlDataAdapter(sc);
             sds.Fill(dt);
-            MessageBox.Show("G " + dt.Rows[0][1]);
+            MessageBox.Show("G " + dt.Rows);
+            if(dt.Rows.Count > 0)
+            {
+                int typeColumn = 5;
+                if(dt.Rows[-])
+            }
+            else
+            {
+
+            }
 
             return dt;
         }

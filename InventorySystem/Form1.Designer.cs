@@ -59,13 +59,16 @@
             this.tbUserName.Name = "tbUserName";
             this.tbUserName.Size = new System.Drawing.Size(100, 20);
             this.tbUserName.TabIndex = 2;
+            this.tbUserName.Text = "agnesas";
             // 
             // tbPassword
             // 
             this.tbPassword.Location = new System.Drawing.Point(212, 66);
             this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(100, 20);
             this.tbPassword.TabIndex = 3;
+            this.tbPassword.Text = "1";
             // 
             // btLogin
             // 
