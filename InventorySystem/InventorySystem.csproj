@@ -79,6 +79,7 @@
     <Compile Include="AddVendor.Designer.cs">
       <DependentUpon>AddVendor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin.cs" />
     <Compile Include="ClassInventory.cs" />
     <Compile Include="ConnectionString.cs" />
     <Compile Include="CustomerDetail.cs">
@@ -123,6 +124,7 @@
     <Compile Include="OrderDetail.Designer.cs">
       <DependentUpon>OrderDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Person.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductDetail.cs">
       <SubType>Form</SubType>
@@ -139,6 +141,7 @@
     <Compile Include="Transaction.Designer.cs">
       <DependentUpon>Transaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
     <Compile Include="VendorDetails.cs">
       <SubType>Form</SubType>
     </Compile>
