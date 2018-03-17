@@ -72,7 +72,7 @@
             // 
             // btAddProduct
             // 
-            this.btAddProduct.Location = new System.Drawing.Point(433, 188);
+            this.btAddProduct.Location = new System.Drawing.Point(433, 127);
             this.btAddProduct.Name = "btAddProduct";
             this.btAddProduct.Size = new System.Drawing.Size(149, 55);
             this.btAddProduct.TabIndex = 4;
@@ -82,7 +82,7 @@
             // 
             // btEditProduct
             // 
-            this.btEditProduct.Location = new System.Drawing.Point(433, 249);
+            this.btEditProduct.Location = new System.Drawing.Point(433, 188);
             this.btEditProduct.Name = "btEditProduct";
             this.btEditProduct.Size = new System.Drawing.Size(149, 55);
             this.btEditProduct.TabIndex = 5;
@@ -92,7 +92,7 @@
             // 
             // btProductDetail
             // 
-            this.btProductDetail.Location = new System.Drawing.Point(433, 310);
+            this.btProductDetail.Location = new System.Drawing.Point(433, 249);
             this.btProductDetail.Name = "btProductDetail";
             this.btProductDetail.Size = new System.Drawing.Size(149, 55);
             this.btProductDetail.TabIndex = 7;
@@ -102,7 +102,7 @@
             // 
             // btAddCategory
             // 
-            this.btAddCategory.Location = new System.Drawing.Point(360, 127);
+            this.btAddCategory.Location = new System.Drawing.Point(277, 127);
             this.btAddCategory.Name = "btAddCategory";
             this.btAddCategory.Size = new System.Drawing.Size(149, 55);
             this.btAddCategory.TabIndex = 9;
@@ -112,7 +112,7 @@
             // 
             // btnTransaction
             // 
-            this.btnTransaction.Location = new System.Drawing.Point(360, 371);
+            this.btnTransaction.Location = new System.Drawing.Point(433, 310);
             this.btnTransaction.Name = "btnTransaction";
             this.btnTransaction.Size = new System.Drawing.Size(149, 55);
             this.btnTransaction.TabIndex = 10;
@@ -122,7 +122,7 @@
             // 
             // btVendorDetail
             // 
-            this.btVendorDetail.Location = new System.Drawing.Point(588, 285);
+            this.btVendorDetail.Location = new System.Drawing.Point(588, 188);
             this.btVendorDetail.Name = "btVendorDetail";
             this.btVendorDetail.Size = new System.Drawing.Size(149, 55);
             this.btVendorDetail.TabIndex = 12;
@@ -132,7 +132,7 @@
             // 
             // btVendor
             // 
-            this.btVendor.Location = new System.Drawing.Point(588, 224);
+            this.btVendor.Location = new System.Drawing.Point(588, 127);
             this.btVendor.Name = "btVendor";
             this.btVendor.Size = new System.Drawing.Size(149, 55);
             this.btVendor.TabIndex = 11;
@@ -156,6 +156,7 @@
             this.Controls.Add(this.btCustomerDetail);
             this.Controls.Add(this.btnCustomerReg);
             this.Name = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
 
         }

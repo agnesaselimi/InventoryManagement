@@ -7,9 +7,9 @@ namespace InventorySystem
 {
     class Moderator : User
     {
-        public override Role getRole()
+        public override UserRole getRole()
         {
-            return Role.Moderator;
+            return UserRole.Moderator;
         }
     }
 }

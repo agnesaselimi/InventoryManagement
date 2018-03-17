@@ -14,8 +14,25 @@ namespace InventorySystem
         public MainForm()
         {
             InitializeComponent();
+            checkForUserBehavior();
         }
 
+        private void checkForUserBehavior()
+        {
+            if (UserHelper.user.getRole() == UserRole.Admin)
+            {
+                btAddProduct.Visible = true;
+                btAddCategory.Visible = true;
+                btVendor.Visible = true;
+            }
+            else
+            {
+                btAddProduct.Visible = false;
+                btAddCategory.Visible = false;
+                btVendor.Visible = false;
+
+            }
+        }
         private void btAddCategory_Click(object sender, EventArgs e)
         {
             AddCategory AC = new AddCategory();
@@ -87,6 +104,11 @@ namespace InventorySystem
         {
             VendorDetails VD = new VendorDetails();
             VD.Show();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -5,11 +5,10 @@ using System.Text;
 
 namespace InventorySystem
 {
-    class Admin : User
+    public enum UserRole
     {
-        public override UserRole getRole()
-        {
-            return UserRole.Admin;
-        }
+        Admin,
+        Moderator,
+        Guest
     }
 }
