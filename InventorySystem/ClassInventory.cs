@@ -135,6 +135,20 @@ namespace InventorySystem
             return dt;
         }
 
+
+        public DataTable UserTable()
+        {
+            string Query = "Select * from TableUser";
+            SqlCommand sc = new SqlCommand(Query, ConnectionString.GetConnection());
+            DataTable dt = new DataTable();
+            SqlDataAdapter sds = new SqlDataAdapter(sc);
+            sds.Fill(dt);
+            MessageBox.Show("G " + dt.Rows[0][1]);
+
+            return dt;
+        }
+
+
         public DataTable InsertTransaction(string Name,string Date,string Product,string Price,string Quantity,string Total )
         {
             DataTable dt = new DataTable();

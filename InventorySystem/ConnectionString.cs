@@ -22,7 +22,7 @@ namespace InventorySystem
         if (My_Sql_Connection == null)
         {
             My_Sql_Connection = new SqlConnection();
-  My_Sql_Connection.ConnectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Gent Berani\Desktop\InventorySystem\InventorySystem\DBInventory.mdf;Integrated Security=True;User Instance=True";
+            My_Sql_Connection.ConnectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Gent Berani\Desktop\InventorySystem\InventorySystem\DBInventory.mdf;Integrated Security=True;User Instance=True";
                 
                 Console.WriteLine("Coonnection string:::"+ My_Sql_Connection.ConnectionString);
 

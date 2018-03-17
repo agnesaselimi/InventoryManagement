@@ -37,8 +37,8 @@ namespace InventorySystem
 
         private void btLogin_Click(object sender, EventArgs e)
         {
-           
-            
+
+            /*
             string Username = tbUserName.Text;
             string Password = tbPassword.Text;
             if (Username == "" && Password == "")
@@ -50,9 +50,16 @@ namespace InventorySystem
             else
             {
                 loginImpl.onUserFailToLogin("User not found.");
-            }
-        }
+            }*/
 
+            loginUser();
+        }
+        
+        private void loginUser()  
+        {
+           ClassInventory.Instance.UserTable();
+          
+        }
         private void FormLogin_Load(object sender, EventArgs e)
         {
 
