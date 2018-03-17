@@ -138,7 +138,7 @@ namespace InventorySystem
         // where ID='" + ID + "' ";
         public DataTable UserTable(string inUsername, string password)
         {
-            string Query = "Select * from TableUser";
+            string Query = "Select * from TableUser WHERE username= '"+inUsername+"' AND password= '"+password+"'";
             SqlCommand sc = new SqlCommand(Query, ConnectionString.GetConnection());
             DataTable dt = new DataTable();
             SqlDataAdapter sds = new SqlDataAdapter(sc);
