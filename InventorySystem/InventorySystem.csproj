@@ -145,6 +145,7 @@
     <Compile Include="VendorDetails.Designer.cs">
       <DependentUpon>VendorDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="VendorInterface.cs" />
     <EmbeddedResource Include="AddCategory.resx">
       <DependentUpon>AddCategory.cs</DependentUpon>
     </EmbeddedResource>

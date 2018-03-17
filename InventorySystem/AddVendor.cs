@@ -14,9 +14,12 @@ namespace InventorySystem
 
         private class VendorImpl : VendorInterface
         {
-            public void onVendorAdd(bool success)
+            public void onVendorAdd(bool success, String vendorName)
             {
-                MessageBox.Show("Vendor Added");
+                if (success)
+                {
+                    MessageBox.Show(vendorName+ " vendor Added");
+                }
             }
         }
 
@@ -47,7 +50,7 @@ namespace InventorySystem
             int val = ClassInventory.Instance.InsertVendor(Name, Email, Address, Product);
             if (val > 0)
             {
-                vendorImpl.onVendorAdd(true);
+                vendorImpl.onVendorAdd(true, Name);
             }
         }
     }

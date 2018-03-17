@@ -7,7 +7,7 @@ namespace InventorySystem
 {
     interface VendorInterface
     {
-         void onVendorAdd(Boolean success);
+         void onVendorAdd(Boolean success, String vendorName);
 
     }
 }
