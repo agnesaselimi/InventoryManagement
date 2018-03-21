@@ -8,8 +8,8 @@ namespace InventorySystem
     struct Product
     {
         int id;
-       public string ProductName;
-        string ProductCost;
+        public string ProductName;
+        public string ProductCost;
         string ProductDescription;
         string ProductCategory;
 

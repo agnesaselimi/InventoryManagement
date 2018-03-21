@@ -176,10 +176,26 @@ namespace InventorySystem
         }
 
 
-        public DataTable InsertTransaction(string Name,string Date,string Product,string Price,string Quantity,string Total )
+        public void InsertTransaction(string Name,string Date,string Product,string Price,string Quantity,string Total, string Description)
         {
-            DataTable dt = new DataTable();
-            return dt;
+            string Query = "Insert into TableTransaction(CustomerName,Date,Product,Price,Quantity,Total,Description) values('" + Name + "','" + Date + "','" + Product + "','" + Price + "','" + Quantity + "','" + Total + "','" + Description + "')";
+            SqlCommand sc = new SqlCommand(Query, ConnectionString.GetConnection());
+            int val = sc.ExecuteNonQuery();
         }
     }
 }
+/* 
+ CREATE TABLE [dbo].[TableTransaction] (
+    [ID]           INT           IDENTITY (1, 1) NOT NULL,
+    [CustomerName] NVARCHAR (50) NOT NULL,
+    [Date]         NVARCHAR (50) NOT NULL,
+    [Product]      NVARCHAR (50) NOT NULL,
+    [Price]        NVARCHAR (50) NOT NULL,
+    [Quantity]     NVARCHAR (50) NOT NULL,
+    [Total]        NVARCHAR (50) NOT NULL,
+    [Description]  NVARCHAR (50) NOT NULL,
+    CONSTRAINT [PK_TableTransaction] PRIMARY KEY CLUSTERED ([ID] ASC)
+);
+
+
+     */

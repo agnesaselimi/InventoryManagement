@@ -111,6 +111,7 @@
             this.cbCustomer.Name = "cbCustomer";
             this.cbCustomer.Size = new System.Drawing.Size(200, 21);
             this.cbCustomer.TabIndex = 7;
+            this.cbCustomer.SelectedIndexChanged += new System.EventHandler(this.cbCustomer_SelectedIndexChanged);
             // 
             // cbProduct
             // 
@@ -119,6 +120,7 @@
             this.cbProduct.Name = "cbProduct";
             this.cbProduct.Size = new System.Drawing.Size(200, 21);
             this.cbProduct.TabIndex = 9;
+            this.cbProduct.SelectedIndexChanged += new System.EventHandler(this.cbProduct_SelectedIndexChanged);
             // 
             // tbPrice
             // 
@@ -127,6 +129,7 @@
             this.tbPrice.ReadOnly = true;
             this.tbPrice.Size = new System.Drawing.Size(197, 20);
             this.tbPrice.TabIndex = 10;
+            this.tbPrice.TextChanged += new System.EventHandler(this.tbPrice_TextChanged);
             // 
             // tbQuantity
             // 
@@ -134,6 +137,7 @@
             this.tbQuantity.Name = "tbQuantity";
             this.tbQuantity.Size = new System.Drawing.Size(197, 20);
             this.tbQuantity.TabIndex = 11;
+            this.tbQuantity.TextChanged += new System.EventHandler(this.tbQuantity_TextChanged);
             // 
             // tbTotal
             // 
@@ -169,43 +173,45 @@
             // 
             // btConfirm
             // 
-            this.btConfirm.Location = new System.Drawing.Point(653, 298);
+            this.btConfirm.Location = new System.Drawing.Point(646, 338);
             this.btConfirm.Name = "btConfirm";
             this.btConfirm.Size = new System.Drawing.Size(75, 23);
             this.btConfirm.TabIndex = 16;
             this.btConfirm.Text = "Confirm";
             this.btConfirm.UseVisualStyleBackColor = true;
+            this.btConfirm.Click += new System.EventHandler(this.btConfirm_Click);
             // 
             // btClose
             // 
-            this.btClose.Location = new System.Drawing.Point(734, 298);
+            this.btClose.Location = new System.Drawing.Point(727, 338);
             this.btClose.Name = "btClose";
             this.btClose.Size = new System.Drawing.Size(75, 23);
             this.btClose.TabIndex = 17;
             this.btClose.Text = "Close";
             this.btClose.UseVisualStyleBackColor = true;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
             // dgCustomer
             // 
             this.dgCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgCustomer.Location = new System.Drawing.Point(572, 12);
             this.dgCustomer.Name = "dgCustomer";
-            this.dgCustomer.Size = new System.Drawing.Size(77, 49);
+            this.dgCustomer.Size = new System.Drawing.Size(608, 58);
             this.dgCustomer.TabIndex = 18;
             // 
             // dgProduct
             // 
             this.dgProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgProduct.Location = new System.Drawing.Point(572, 67);
+            this.dgProduct.Location = new System.Drawing.Point(572, 94);
             this.dgProduct.Name = "dgProduct";
-            this.dgProduct.Size = new System.Drawing.Size(77, 49);
+            this.dgProduct.Size = new System.Drawing.Size(608, 238);
             this.dgProduct.TabIndex = 19;
             // 
             // Transaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 403);
+            this.ClientSize = new System.Drawing.Size(1192, 403);
             this.Controls.Add(this.dgProduct);
             this.Controls.Add(this.dgCustomer);
             this.Controls.Add(this.btClose);
